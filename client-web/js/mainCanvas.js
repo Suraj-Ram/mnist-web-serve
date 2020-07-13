@@ -1,5 +1,5 @@
 var digitDrawCanvas = function(p) {
-
+    p.livePredit = false
 
     p.setup = function() {
         p.pixelDensity(20);
@@ -17,7 +17,9 @@ var digitDrawCanvas = function(p) {
         p.noStroke()
         p.ellipse(p.mouseX/10,p.mouseY/10,2,2)
 
-        
+        if (p.livePredit) {
+            predictDigit()
+        }
     }
 
     p.keyPressed = function() {
