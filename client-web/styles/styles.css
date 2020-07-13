@@ -1,0 +1,41 @@
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.header > h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header > h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.leftPanel {
+    flex-grow: 1;
+}
+
+#drawCanvasContainer {
+    flex-grow: 5;
+}
