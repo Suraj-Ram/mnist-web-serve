@@ -20,7 +20,7 @@ function getTensor(rawArray) {
 function predictBasicModel(imgTensor) {
     input = imgTensor.reshape([1,28,28])
     predictions = basicModel.predict(input)
-    console.log(getDigit(predictions))
+    return getDigit(predictions)
 
 }
 

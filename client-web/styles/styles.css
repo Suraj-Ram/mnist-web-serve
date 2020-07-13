@@ -29,11 +29,14 @@ body {
     display: flex;
     justify-content: center;
     
-    align-items: center;
+
 }
 
 .leftPanel {
     flex-grow: 1;
+    width: 10%;
+    font-size: 1.3rem;
+    padding: 10px;
 }
 
 #drawCanvasContainer {
