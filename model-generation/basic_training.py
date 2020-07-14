@@ -22,9 +22,12 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-model.fit(img_train, lab_train, epochs=5)
+#model.fit(img_train, lab_train, epochs=5)
+
+model.summary()
+
 print('Evaluating...')
 model.evaluate(img_test, lab_test)
 
-print('Saving...')
-model.save('saved_model_basic.h5')
+# print('Saving...')
+# model.save('saved_model_basic.h5')
