@@ -34,7 +34,21 @@
     <div class="container-fluid ml-15 mt-4">
         <div class="row">
             <div class="col-sm-3">
-                <p>Draw a digit from 0-9 in the canvas to the left and hit predict to see the prediction.</p>
+                <p>Draw a digit from 0-9 in the canvas to the left, pick a model and hit predict to see the prediction.</p>
+
+                <hr>
+
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary" id="mlpLabel">
+                      <input type="radio" name="options" id="option2" autocomplete="off"  onclick="selectModel('MLP')"> Basic MLP
+                    </label>
+                    <label class="btn btn-primary" id="cnnLabel">
+                      <input type="radio" name="options" id="option3" autocomplete="off" onclick="selectModel('CNN')"> CNN
+                    </label>
+                </div>
+
+                <hr>
+
                 <button class="btn btn-primary" onclick="predictDigit()">Predict!</button>
                 <button class="btn btn-danger" onclick="drawCanvas.clearCanvas()">Clear</button>
             </div>
@@ -45,7 +59,7 @@
 
             <div class="col ml-5">
                 <div class="card">
-                    <h5 class="card-header">Predictions</h5>
+                    <h5 class="card-header">Predictions   <span class="badge badge-secondary" id="modelType"></span></h5>
                     <div class="card-body">
                         <h5 class="card-title">Digit: <span style="font-weight: 400;" id="digit">_</span></h5>
 
