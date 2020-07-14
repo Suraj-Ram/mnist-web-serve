@@ -38,4 +38,4 @@ print('Evaluating...')
 model.evaluate(img_test, lab_test)
 
 print('Saving...')
-model.save('cnn_model_basic.h5')
+model.save('cnn_model.h5')
