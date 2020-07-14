@@ -1,10 +1,7 @@
 :root {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body {
-    margin: 0;
-    padding: 0;
-}
+
 .header {
     margin-top: 5px;
     margin-bottom: 20px;
@@ -23,22 +20,3 @@ body {
     font-weight: 300;
 }
 
-
-
-.mainContainer {
-    display: flex;
-    justify-content: center;
-    
-
-}
-
-.leftPanel {
-    flex-grow: 1;
-    width: 10%;
-    font-size: 1.3rem;
-    padding: 10px;
-}
-
-#drawCanvasContainer {
-    flex-grow: 5;
-}

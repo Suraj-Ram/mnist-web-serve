@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <title>MNIST Classifer</title>
 
@@ -25,34 +25,34 @@
 
 </head>
 <body>
-    <div class="header">
+    <div class="header mb-4">
         <h1>MNIST Handwritten Digits Classifer</h1>
         <h2>Python Keras model served using Tensorflow JS</h2>
     </div>
-    <!-- <div class="mainContainer">
 
-        <div class="leftPanel">
-            Draw on the canvas to see the predicted digit
-            <button onclick="predictDigit()">Predict!</button>
-        </div>
 
-        <div id="drawCanvasContainer"></div>
-
-        <div class="rightPanel">
-            right
-        </div>
-    </div> -->
-
-    <div class="container">
+    <div class="container-fluid ml-15 mt-4">
         <div class="row">
-            <div class="col">
-                1
+            <div class="col-sm-3">
+                <p>Draw a digit from 0-9 in the canvas to the left and hit predict to see the prediction.</p>
+                <button class="btn btn-primary" onclick="predictDigit()">Predict!</button>
+                <button class="btn btn-danger">Clear</button>
             </div>
-            <div class="col">
-                2
+
+            <div class="col-sm-3" style="max-width: 280px;">
+                <div id="drawCanvasContainer"></div>
             </div>
-            <div class="col">
-                3
+
+            <div class="col ml-5">
+                <div class="card">
+                    <h5 class="card-header">Predictions</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Digit: <span style="font-weight: 400;" id="digit">8</span></h5>
+
+                        <h5 class="card-title">One-Hot Vector:</h5>
+                        <code class="card-text" id="oneHot">[0.3292454779148102, 0.000997265800833702, 0.1454329788684845, 0.010209241881966591, 0.000009318026968685444, 0.41691505908966064, 0.01029854454100132, 0.0034115633461624384, 0.08345673978328705, 0.000023820257410989143]</code>
+                    </div>
+                </div>
             </div>
 
         </div>
