@@ -42,16 +42,27 @@
                     <label class="btn btn-secondary" id="mlpLabel">
                       <input type="radio" name="options" id="option2" autocomplete="off"  onclick="selectModel('MLP')"> Basic MLP
                     </label>
-                    <label class="btn btn-primary" id="cnnLabel">
+                    <label class="btn btn-secondary" id="cnnLabel">
                       <input type="radio" name="options" id="option3" autocomplete="off" onclick="selectModel('CNN')"> CNN
                     </label>
                 </div>
 
                 <hr>
 
-                <button class="btn btn-primary" onclick="predictDigit()">Predict!</button>
+                <button class="btn btn-primary" onclick="predictDigit()" id="predictButton">Predict!</button>
                 <button class="btn btn-danger" onclick="drawCanvas.clearCanvas()">Clear</button>
+
+                <hr>
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="livePredict" onchange="handleLivePredict()">
+                    <label class="custom-control-label" for="livePredict">Enable live predictions</label>
+                    <p class="text-danger font-italic">Requires strong computer</p>
+
+                </div>
+
             </div>
+
 
             <div class="col-sm-3" style="max-width: 280px;">
                 <div id="drawCanvasContainer"></div>
