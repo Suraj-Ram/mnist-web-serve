@@ -43,6 +43,10 @@ var digitDrawCanvas = function(p) {
         return canvasArray
     }
 
+    p.clearCanvas = function() {
+        p.background(0)
+    }
+
 
 
 }

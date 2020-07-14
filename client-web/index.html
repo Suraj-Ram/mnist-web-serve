@@ -36,7 +36,7 @@
             <div class="col-sm-3">
                 <p>Draw a digit from 0-9 in the canvas to the left and hit predict to see the prediction.</p>
                 <button class="btn btn-primary" onclick="predictDigit()">Predict!</button>
-                <button class="btn btn-danger">Clear</button>
+                <button class="btn btn-danger" onclick="drawCanvas.clearCanvas()">Clear</button>
             </div>
 
             <div class="col-sm-3" style="max-width: 280px;">
@@ -47,10 +47,10 @@
                 <div class="card">
                     <h5 class="card-header">Predictions</h5>
                     <div class="card-body">
-                        <h5 class="card-title">Digit: <span style="font-weight: 400;" id="digit">8</span></h5>
+                        <h5 class="card-title">Digit: <span style="font-weight: 400;" id="digit">_</span></h5>
 
                         <h5 class="card-title">One-Hot Vector:</h5>
-                        <code class="card-text" id="oneHot">[0.3292454779148102, 0.000997265800833702, 0.1454329788684845, 0.010209241881966591, 0.000009318026968685444, 0.41691505908966064, 0.01029854454100132, 0.0034115633461624384, 0.08345673978328705, 0.000023820257410989143]</code>
+                        <code class="card-text" id="oneHot">[ ]</code>
                     </div>
                 </div>
             </div>
