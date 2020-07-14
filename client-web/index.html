@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <title>MNIST Classifer</title>
 
@@ -24,23 +25,39 @@
 
 </head>
 <body>
-    <div class="header">
+    <div class="header mb-4">
         <h1>MNIST Handwritten Digits Classifer</h1>
         <h2>Python Keras model served using Tensorflow JS</h2>
     </div>
-    <div class="mainContainer">
 
-        <div class="leftPanel">
-            Draw on the canvas to see the predicted digit
-            <button onclick="predictDigit()">Predict!</button>
-        </div>
 
-        <div id="drawCanvasContainer"></div>
+    <div class="container-fluid ml-15 mt-4">
+        <div class="row">
+            <div class="col-sm-3">
+                <p>Draw a digit from 0-9 in the canvas to the left and hit predict to see the prediction.</p>
+                <button class="btn btn-primary" onclick="predictDigit()">Predict!</button>
+                <button class="btn btn-danger" onclick="drawCanvas.clearCanvas()">Clear</button>
+            </div>
 
-        <div class="rightPanel">
-            right
+            <div class="col-sm-3" style="max-width: 280px;">
+                <div id="drawCanvasContainer"></div>
+            </div>
+
+            <div class="col ml-5">
+                <div class="card">
+                    <h5 class="card-header">Predictions</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Digit: <span style="font-weight: 400;" id="digit">_</span></h5>
+
+                        <h5 class="card-title">One-Hot Vector:</h5>
+                        <code class="card-text" id="oneHot">[ ]</code>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+
     
 </body>
 </html>
