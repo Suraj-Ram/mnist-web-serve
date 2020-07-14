@@ -1,6 +1,6 @@
 let drawCanvas = new p5(digitDrawCanvas, 'drawCanvasContainer')
 
-let selectedModel = 'CNN'
+let selectedModel = 'MLP'
 
 selectModel('MLP')
 
@@ -37,4 +37,10 @@ function selectModel(model) {
         document.getElementById(`mlpLabel`).className = `btn btn-secondary`  
     }
     console.log(selectedModel)
+}
+
+function handleLivePredict() {
+    drawCanvas.livePredict = document.getElementById('livePredict').checked
+    console.log(drawCanvas.livePredict)
+    document.getElementById('predictButton').disabled = drawCanvas.livePredict
 }
