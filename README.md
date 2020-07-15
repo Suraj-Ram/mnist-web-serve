@@ -2,7 +2,12 @@
 
 Multiple Python Keras models, trained on the MNIST dataset, served on a interactive webpage through the use of Tensorflow JS for loading and getting predictions from the model and p5.js for canvas operations.
 
+![Screenshot](relative/../assets/images/screenshot1.png)
+
+[Link](https://mnist.surajram.xyz)
+
 ## Models Used
+*Model training files are located in `/model-generation`*
 ### Basic MLP
 ```
 Model: "sequential"
@@ -59,3 +64,5 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 Eval. Accuracy: `313/313 [==============================] - 1s 4ms/step - loss: 0.0439 - accuracy: 0.9891`
+
+
