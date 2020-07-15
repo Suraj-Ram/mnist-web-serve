@@ -29,11 +29,11 @@ function predictDigit() {
 function selectModel(model) {
     selectedModel = model
     if(selectedModel === 'MLP') {
-        document.getElementById('mlpLabel').className = `btn btn-primary active`
+        document.getElementById('mlpLabel').className = `btn btn-success`
         document.getElementById(`cnnLabel`).className = `btn btn-secondary`  
     }
     if(selectedModel === 'CNN') {
-        document.getElementById('cnnLabel').className = `btn btn-primary active`
+        document.getElementById('cnnLabel').className = `btn btn-success`
         document.getElementById(`mlpLabel`).className = `btn btn-secondary`  
     }
     console.log(selectedModel)
